@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  color:blue;
+}
+
+.app {
+  min-height: 100vh;
+  background: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.app h1 {
+  margin-bottom: 8px;
+  color: blue;
+  font-size: 42px;
+}
+
+
+.task-input {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 25px;
+  background: white;
+  padding: 15px;
+  border: 2px solid blue;
+  display: flex;
+  gap: 12px;
+}
+
+.task-input input {
+  display: flex;
+  min-width: 0;
+  padding: 12px;
+  background-color: white;
+  border: 1px solid blue;
+  font-size: 18px;
+  padding: 12px;
+  color: blue;
+}
+
+.task-input select {
+  padding: 12px;
+  border: 1px solid blue;
+  background: white;
+  color: blue;
+  font-size: 18px;
+  padding: 12px;
+}
+
+.task-input button {
+  font-size: 18px;
+  padding: 12px 20px;
+  background: blue;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.board {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+
+.column {
+  background: white;
+  min-height: 400px;
+  border: 2px solid blue;
+  text-align: left;
+}
+
+.column h2 {
+  background: blue;
+  color: white;
+  padding: 15px;
+  font-size: 28px;
+  text-align: center;
+  
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.task {
+  background: white;
+  padding: 15px;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task h3 {
+  font-size: 20px;
+  margin: 0;
+  flex: 1;
+  color: blue;
+  overflow-wrap: anywhere;
+}
+
+.task span {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid blue;
+  border-radius: 12px;
+  font-size: 16px;
+  white-space: nowrap;
+  color: blue;
+}
+
+.task button {
+  font-size: 16px;
+  padding: 10px 14px;
+  white-space: normal;
+}
+
+.board {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1;
+  min-width: 0;
+}
+
+
+@media (max-width: 900px) {
+  .board {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 25px 12px;
+  }
+
+  .app h1 {
+    font-size: 25px;
+  }
+
+  .task-input {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .task-input input,
+  .task-input select,
+  .task-input button {
+    width: 100%;
+  }
+
+  .column {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .board {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+}
